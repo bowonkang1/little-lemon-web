@@ -1,18 +1,20 @@
 import React from 'react';
-import Header from './Header'; // Make sure this is a default import
-import Nav from './Nav'; // Make sure this is a default import
-import Main from './Main'; // Make sure this is a default import
-import Footer from './Footer'; // Make sure this is a default import
+import './App.css';
+import Nav from "./components/Nav"
+import Main from "./components/Main"
+import Menu from './components/Menu';
+import Footer from './components/Footer';
+
 
 function App() {
-  console.log("App is rendering");
   return (
-    <div>
-      <Header />
-      <Nav />
+
+    <>
+      <Nav/>
       <Main />
-      <Footer />
-    </div>
+      <Menu/>
+      <Footer/>
+    </>
   );
 }
 

@@ -1,38 +1,96 @@
-.App {
-  text-align: center;
+/* App.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  font-family: Arial, sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+/* Container for the entire page */
+.app-container {
+  display: grid;
+  grid-template-columns: 1fr; /* One column layout */
+  grid-template-rows: auto 1fr auto; /* Header, content, footer */
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
   min-height: 100vh;
+}
+
+header {
+  grid-area: header;
+  background-color: #f4f4f4;
+  padding: 20px;
+}
+
+main {
+  grid-area: main;
+  padding: 20px;
+}
+
+footer {
+  grid-area: footer;
+  background-color: #f4f4f4;
+  text-align: center;
+  padding: 10px;
+}
+
+/* Nav section */
+nav ul {
+  display: flex;
+  justify-content: space-around; /* Items spaced evenly */
+  list-style-type: none;
+  padding: 10px;
+  background-color: #333;
+}
+
+nav ul li {
+  margin: 0 10px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+/* Hero section */
+.hero {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  text-align: center;
+  background-color: #e5e5e5;
+  padding: 50px;
+}
+
+.hero h2 {
+  margin: 10px 0;
+  font-size: 2.5rem;
+}
+
+.hero h3 {
+  margin: 10px 0;
+  font-size: 1.5rem;
+}
+
+.hero p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.reserve-btn {
+  padding: 10px 20px;
+  background-color: #f4a261;
+  border: none;
   color: white;
+  font-size: 1rem;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
